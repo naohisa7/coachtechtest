@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\ContactController;
 
-Route::get('/building', [TestController::class, 'build']);
-Route::get('/building/{room}', [TestController::class, 'room']);
+Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact/end', [ContactController::class, 'add']);
+Route::post('/contact/end', [ContactController::class, 'create']);
